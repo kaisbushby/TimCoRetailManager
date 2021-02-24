@@ -339,3 +339,4 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /TRMDataManager/Web.config
+/TRMData/PublishLocations/TRMData.publish.xml
