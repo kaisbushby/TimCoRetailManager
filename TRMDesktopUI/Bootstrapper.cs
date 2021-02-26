@@ -31,7 +31,8 @@ namespace TRMDesktopUI
 
             _container
                 .Singleton<IWindowManager, WindowManager>()
-                .Singleton<IEventAggregator, EventAggregator>();
+                .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<IAPIHelper, APIHelper>();
 
             // Runs RegisterPerRequest() for every available class ending with "ViewModel"
             GetType().Assembly.GetTypes()
