@@ -12,6 +12,8 @@ namespace TRMDataManager.Controllers
     [Authorize]
     public class UserController : ApiController
     {
+        [HttpGet]
+        //[Route("api/llll")]
         public UserModel GetById()
         {
             string id = RequestContext.Principal.Identity.GetUserId();
