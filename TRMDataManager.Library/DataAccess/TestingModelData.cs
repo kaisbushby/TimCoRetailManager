@@ -8,18 +8,16 @@ using TRMDataManager.Library.Models;
 
 namespace TRMDataManager.Library.DataAccess
 {
-    public class UserData
+    public class TestingModelData
     {
-        public List<UserModel> GetUserById(string Id)
+        // TODO: Add an Interface for Dependency Injection use
+        public List<TestingModel> GetTestingBlogs()
         {
             SqlDataAccess sql = new SqlDataAccess();
 
-            var p = new { Id = Id };
-            List<UserModel> output = sql.LoadData<UserModel, dynamic>("dbo.spUserLookup", p, "TRMDataConnection");
+            List<TestingModel> output = sql.LoadData<TestingModel, dynamic>("dbo.TestingModel", null, "DeskMiniMSSQL");
 
             return output;
         }
-
-        
     }
 }

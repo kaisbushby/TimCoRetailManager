@@ -5,7 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Threading.Tasks;
-using TRMDataManager.Library.DataAccess
+using TRMDataManager.Library.Models;
+using TRMDataManager.Library.DataAccess;
 
 namespace TRMDataManager.Controllers
 {
@@ -14,31 +15,10 @@ namespace TRMDataManager.Controllers
         // GET api/<controller>
         [AllowAnonymous]
         [HttpGet]
-        [Route("api/calldb")]
         public async Task<IEnumerable<TestingModel>> Get()
         {
-
-        }
-
-        // GET api/<controller>/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<controller>
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
+            TestingModelData data = new TestingModelData();
+            return data.GetTestingBlogs();
         }
     }
 }
