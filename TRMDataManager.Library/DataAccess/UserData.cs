@@ -19,5 +19,14 @@ namespace TRMDataManager.Library.DataAccess
 
             return output;
         }
+
+        public List<TestingModel> GetTestingBlogs() 
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+
+            List<TestingModel> output = sql.LoadData<TestingModel, dynamic>("dbo.spUserLookup", null, "TRMDataConnection");
+
+            return output;
+        }
     }
 }
