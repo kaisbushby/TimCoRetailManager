@@ -10,10 +10,11 @@ using TRMDataManager.Library.DataAccess;
 
 namespace TRMDataManager.Controllers
 {
+    [Authorize]
     public class CustomTestingController : ApiController
     {
         // GET api/<controller>
-        [AllowAnonymous]
+        
         [HttpGet]
         public async Task<IEnumerable<TestingModel>> Get()
         {
