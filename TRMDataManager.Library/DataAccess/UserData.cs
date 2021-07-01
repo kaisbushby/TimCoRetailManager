@@ -24,7 +24,7 @@ namespace TRMDataManager.Library.DataAccess
         {
             SqlDataAccess sql = new SqlDataAccess();
 
-            List<TestingModel> output = sql.LoadData<TestingModel, dynamic>("dbo.spUserLookup", null, "TRMDataConnection");
+            List<TestingModel> output = sql.LoadData<TestingModel, dynamic>("dbo.TestingModel", null, "DeskMiniMSSQL");
 
             return output;
         }
